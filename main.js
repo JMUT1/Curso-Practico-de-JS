@@ -48,7 +48,8 @@ function areaCirculo(radio){
 
 console.groupEnd();
 
-//Aqui interactuamos con HTML
+// Interaccion de HTML y JS
+//Funcion del Cuadrado
 
 function calcularPerimetroCuadrado(){
     const input = document.getElementById("inputCuadrado");
@@ -64,4 +65,18 @@ function CalcularAreaCuadrada(){
 
     const area = areaCuadrada(value);
     alert (area);
+}
+
+//Funcion del Triangulo
+
+function calcularPerimetroTriangulo(){
+    const inputT1 = document.getElementById("inputTriangulo1");
+    const valueT1 = Number (inputT1.value);
+    const inputT2 = document.getElementById("inputTriangulo2");
+    const valueT2 = Number (inputT2.value);
+    const baseT = document.getElementById("inputbase");
+    const valueBase = Number (baseT.value);
+
+    const perimetro = perimetroTriangulo(valueT1, valueT2, valueBase);
+    alert (perimetro);
 }
