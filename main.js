@@ -1,47 +1,48 @@
 //Codigo del Cuadrado
 console.group("Cuadrado");
-// Lado del Cuadrado
-const ladoCuadrado = 5;
-console.log(`los lados del cuadrado miden ${ladoCuadrado} cms`);
-//Perimetro del Cuadrado
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log(`el perimetro del cuadro es ${perimetroCuadrado} cms`);
-// Area del Cuadrado
-const areaCuadrada = ladoCuadrado * ladoCuadrado;
-console.log(`el area del cuadro es ${areaCuadrada} cms^2`);
-//--------------------------------------------------------------//
+
+//Formula perimetro del Cuadrado
+function perimetroCuadrado (lado) {
+    return lado *4;
+};
+// funcion area del Cuadrado
+function areaCuadrada(lado){
+    return lado * lado
+
+};
 console.groupEnd ();
 
 
 // Codigo del Triangulo
 console.group("Triangulo");
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-const alturaTriangulo = 5.5;
 
-console.log (`los lados del triangullo miden ${ladoTriangulo1}cms ${ladoTriangulo2}cms ${baseTriangulo}cms`);
-console.log(`La altura del triangulo es de  ${alturaTriangulo} cms`);
+function perimetroTriangulo (lado1, lado2, baseTriangulo){
+    return lado1 + lado2 + baseTriangulo;
+};
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log(`El perimetro del triangulo es de ${perimetroTriangulo}`);
+function areaTriangulo (base, altura){
+    return (base * altura) / 2;
+};
 
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-console.log (`El area del triangulo es de ${areaTriangulo} cm^2`);
 
 console.groupEnd();
 
  //CODIGO DEL CIRCULO
 console.group("Circulo");
 
-const radioCirculo = 4;
-const diametroCirculo = radioCirculo * 2;
 const PI = Math.PI;
 
-const perimetroCirculo = parseFloat(diametroCirculo * PI).toFixed(2);
-console.log(`El perimetro del circulo es ${perimetroCirculo} cm`)
+function diametroCirculo (radio){
+    return radio * 2;
+};
 
-const areaCirculo = parseFloat((radioCirculo * radioCirculo) * PI).toFixed(2);
-console.log(`El area del circulo es de ${areaCirculo} cm^2`)
+function perimetroCirculo(radio){
+    const diametro = diametroCirculo (radio);
+    return diametro * PI;
+};
+
+function areaCirculo(radio){
+    return (radio * radio) * PI;
+};
 
 console.groupEnd();
