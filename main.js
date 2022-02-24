@@ -122,4 +122,16 @@ function calcularAreaCirculo(){
     alert(areaDelCirculo);
 }
 
-// Triangulo Isoceles 
+// Interación Triangulo Isoceles 
+
+function calcularAlturaTrianguloIsoceles(){
+    const inputladoA = document.getElementById("ladoTrianguloA");
+    const valueladoA = Number(inputladoA.value);
+    const inputladoB = document.getElementById("ladoTrianguloB");
+    const valueladoB = Number(inputladoB.value);
+    const inputBase = document.getElementById("baseTriangulo");
+    const valueBase = Number(inputBase.value);
+
+    const alturaIsoceles = alturaTrianguloIsoceles(valueladoA, valueladoB, valueBase);
+    alert (alturaIsoceles);
+}
