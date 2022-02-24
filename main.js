@@ -48,6 +48,20 @@ function areaCirculo(radio){
 
 console.groupEnd();
 
+//Triangulo Isoceles
+
+function alturaTrianguloIsoceles (ladoA, ladoB, base){
+    if (ladoA === ladoB && ladoA != base){
+        alert (`Tu Triangulo es Isoceles`);
+        const altura =  Math.sqrt((ladoA **2) - (base **2 / 4));
+        const alturaDecimal = Number (parseFloat(altura).toFixed(3));
+        return alturaDecimal;
+    }
+    else{
+        alert(`No es un Triangulo Isoceles`);
+    };
+};
+
 // Interaccion de HTML y JS
 //Funcion del Cuadrado
 
@@ -107,3 +121,5 @@ function calcularAreaCirculo(){
 
     alert(areaDelCirculo);
 }
+
+// Triangulo Isoceles 
