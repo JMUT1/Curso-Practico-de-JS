@@ -80,3 +80,30 @@ function calcularPerimetroTriangulo(){
     const perimetro = perimetroTriangulo(valueT1, valueT2, valueBase);
     alert (perimetro);
 }
+
+//Interacion Circulo
+
+function calcularDiametroCirculo(){
+    const  input = document.getElementById("inputRadioCirculo");
+    const value = input.value;
+
+    const diametro = diametroCirculo(value);
+    alert (diametro);
+}
+
+function calcularPerimetroCirculo(){
+    const input = document.getElementById("inputRadioCirculo");
+    const value = input.value;
+
+    const perimetroDelCirculo = parseFloat(perimetroCirculo(value)).toFixed(3);
+    alert(perimetroDelCirculo); 
+}
+
+function calcularAreaCirculo(){
+    const input = document.getElementById("inputRadioCirculo");
+    const value = input.value;
+
+    const areaDelCirculo = parseFloat(areaCirculo(value).toFixed(3));
+
+    alert(areaDelCirculo);
+}
