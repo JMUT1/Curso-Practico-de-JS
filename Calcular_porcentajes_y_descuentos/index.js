@@ -1,7 +1,15 @@
-const cupones = [
-    "cupon1",
-    "cupon2",
-    "cupon_secreto",
+const cupones = [{
+    name: "cupon1",
+    discount: 15,
+},
+{
+    name: "cupon2",
+    discount: 20,
+},
+{
+    name: "cupon3",
+    discount: 30,
+},
 ];
 
 
@@ -16,28 +24,28 @@ function calcularPrecioConDescuento (precio, descuento){
 //Interacion HTML y JS
 
 function onClickButtonPriceDiscount () {
+
     const precioUsuario = document.getElementById("inputPrice");
     const precioValue = precioUsuario.value;
 
     const cuponUsuario = document.getElementById("inputCupon");
     const cuponValue = cuponUsuario.value;
 
-    let descuento;
-
-    switch(cuponValue){
-        case cupones [0]:
-            descuento = 15;
-        break;
-        case cupones [1]:
-            descuento = 30;
-        break;
-        case cupones [2]:
-            descuento = 25;
+    const isCuponValueValid = function(cupon){
+        return cupon.name === cuponValue;
     };
-
-    const precioConDescuento = calcularPrecioConDescuento(precioValue,descuento);
+    
+    const userCupon = cupones.find (isCuponValueValid);
+    
+    if(!userCupon){
+        alert = `El cupon ${cuponValue} no es valido`
+    }
+    else{
+        const descuento = userCupon.discount;
+        const precioConCupon = calcularPrecioConDescuento (precioValue, descuento);
+    }
 
     const resultP = document.getElementById("ResultPrice");
 
-    resultP.innerHTML = `El precio con descuento son $${precioConDescuento} pesos`
+    resultP.innerHTML = `El precio con descuento son $${precioConCupon} pesos`
 }
