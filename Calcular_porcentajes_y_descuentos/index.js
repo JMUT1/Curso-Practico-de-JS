@@ -38,14 +38,16 @@ function onClickButtonPriceDiscount () {
     const userCupon = cupones.find (isCuponValueValid);
     
     if(!userCupon){
-        alert = `El cupon ${cuponValue} no es valido`
+        alert (`El cupon ${cuponValue} no es valido`);
     }
     else{
         const descuento = userCupon.discount;
         const precioConCupon = calcularPrecioConDescuento (precioValue, descuento);
+
+        const resultP = document.getElementById("ResultPrice");
+
+        resultP.innerHTML = `El precio con descuento son $${precioConCupon} pesos`
     }
 
-    const resultP = document.getElementById("ResultPrice");
 
-    resultP.innerHTML = `El precio con descuento son $${precioConCupon} pesos`
 }
