@@ -48,6 +48,4 @@ function onClickButtonPriceDiscount () {
 
         resultP.innerHTML = `El precio con descuento son $${precioConCupon} pesos`
     }
-
-
 }
