@@ -18,13 +18,15 @@
 
     <form>
         <label for="inputPrice">Escribe el precio de tu producto</label>
-        <input id="inputPrice">
-
+        <input id="inputPrice" type="number">
+ 
         <label for="inputDiscount"> Escribe el descuento de tu producto</label>
-        <input id="inputDiscount">
-        <button type="button">
+        <input id="inputDiscount" type="number">
+        <button type="button" onclick="onClickButtonPriceDiscount()">
             Calcular el precio con Descuento
         </button>
+
+        <p id="ResultPrice"></p>
     </form>
     <script src="index.js"></script>
 </body>
