@@ -9,8 +9,12 @@ function calcularMediaAritmetica(lista) {
       return promedio;
     }
 
-const lista1 = [100,200,300,500,400000];
+const lista1 = [100,200,500,400000,300];
 
+//Ordena la lista 
+lista1.sort(function(a,b){
+    return a - b;
+})
 const mitadlista1 =  parseInt (lista1.length / 2);
 
 //Funciones validadora
