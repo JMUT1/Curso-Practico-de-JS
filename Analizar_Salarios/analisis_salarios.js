@@ -47,7 +47,7 @@ const spliceCount = salariosColsort.length - spliceStar;
 
 const salariosColTop10 = salariosColsort.splice(spliceStar,spliceCount);
 
-const medianaTop10 = medianaSalarios(salariosColTop10);
+const medianaTop10Col = medianaSalarios(salariosColTop10);
 
 
 console.log({
